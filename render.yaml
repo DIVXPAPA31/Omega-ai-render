@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: omega-ai
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.index:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: OPENAI_KEY
+        value: sk-5678mnopqrstuvwx5678mnopqrstuvwx5678mnop
+      - key: GROQ_KEY
+        value: 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
+      - key: ANTHROPIC_KEY
+        value: AQ.Ab8RN6Ks0UHRbaH6auNWfKGlM_fSa23RI965MBmfvzQxpfL6ng
